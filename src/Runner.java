@@ -16,13 +16,13 @@ public class Runner
 			
 			int x = d.roll();
 			System.out.println("You have rolled a " + x);
-			if(g + x < 40)
+			if(g + x < b.board.size())
 			{
 				g +=x;
 			}
 			else
 			{
-				g = g + x - 40;
+				g = g + x - b.board.size();
 				System.out.println("You have passed go. You recieve 200 dollars");
 				p.addMoney(200);
 			}
