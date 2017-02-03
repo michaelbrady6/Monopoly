@@ -1,16 +1,24 @@
 import java.util.*;
 public class Player 
 {
-	String name;
+	String name = "";
 	int money = 1500;
+	Player()
+	{
+		
+	}
 	ArrayList<Property> owned = new ArrayList<Property>();
+	Player(String n)
+	{
+		name = n;
+	}
 	public void addMoney(int x)
 	{
 		money += x;
 	}
 	public void removeMoney(int x)
 	{
-		money -=x;
+		money -= x;
 	}
 	public int UtilitiesOwned()
 	{
@@ -35,6 +43,10 @@ public class Player
 			}
 		}
 		return c;
+	}
+	public void setLocation(Board b, int z)
+	{
+		Runner.g = z;
 	}
 	@Override
 	public String toString() {

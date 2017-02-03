@@ -8,6 +8,7 @@ public class CardGiver extends Space
 	}
 	public void landedOn(Player y)
 	{
+		System.out.println("You have landed on " + name);
 		System.out.println("You recieve a card");
 	}
 }
