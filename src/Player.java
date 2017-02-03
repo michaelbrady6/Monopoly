@@ -15,10 +15,12 @@ public class Player
 	public void addMoney(int x)
 	{
 		money += x;
+		System.out.println("You have " + money +" dollars");
 	}
 	public void removeMoney(int x)
 	{
 		money -= x;
+		System.out.println("You have " + money +" dollars");
 	}
 	public int UtilitiesOwned()
 	{

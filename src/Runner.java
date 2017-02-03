@@ -1,7 +1,7 @@
 import java.util.*;
 public class Runner 
 {
-	static int g;
+	static int g = 0;
 	static Board b = new Board();
 	public static void main(String[] args) 
 	{
@@ -9,8 +9,8 @@ public class Runner
 		Scanner n = new Scanner(System.in);
 		System.out.println("What is your name?");
 		String name = n.nextLine();
+		System.out.println("Welcome to Monopoly " + name);
 		Player p = new Player(name);
-		int y = 0;
 		while(p.money > 0)
 		{
 			
@@ -27,7 +27,7 @@ public class Runner
 				p.addMoney(200);
 			}
 			b.board.get(g).landedOn(p);
-			System.out.println("You have " + p.money + " dollars");
+//			System.out.println("You have " + p.money + " dollars");
 			System.out.println("The properties you own are:");
 			for (int i = 0; i < p.owned.size(); i++)
 			{
