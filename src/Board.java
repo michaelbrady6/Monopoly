@@ -1,10 +1,11 @@
 import java.util.*;
+import java.io.*;
 public class Board 
 {
 	ArrayList<Space> board = new ArrayList<Space>();
 	Board()
 	{
-		board.add(new Go());
+		board.add(new Go("GO"));
 		board.add(new ColoredProperty("Purple", 2, 60, "Mediterranean Avenue"));
 		board.add(new CardGiver("Community Chest"));
 		board.add(new ColoredProperty("Purple", 4, 60, "Baltic Avenue"));
@@ -44,5 +45,22 @@ public class Board
 		board.add(new ColoredProperty("Blue", 35, 350, "Park Place"));
 		board.add(new Tax("Luxury Tax"));
 		board.add(new ColoredProperty("Blue", 50, 400, "Boardwalk"));
+	}
+	public void setBoard(int i)
+	{
+		
+		if(i == 1)
+			{
+				
+			}
+		if(i == 2)
+			{
+				Scanner x = new Scanner(new File("14ers"));
+				for(int z = 0; z<board.size(); z++)
+					{
+						String y = x.nextLine();
+						board.get(i).setName(y);
+					}
+			}
 	}
 }

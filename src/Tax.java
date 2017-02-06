@@ -11,7 +11,7 @@ public class Tax extends Space
 		System.out.println("You have landed on " + name);
 		System.out.println("Do you want to pay:");
 		System.out.println("1: 10% of your money");
-		System.out.println("2: 75 dollars");
+		System.out.println("2: 200 dollars");
 		int z = in.nextInt();
 		if(z == 1)
 		{
@@ -20,8 +20,8 @@ public class Tax extends Space
 		}
 		else
 		{
-			System.out.println("You have paid 75 dollars");
-			x.removeMoney(75);
+			System.out.println("You have paid 200 dollars");
+			x.removeMoney(200);
 		}
 	}
 }
