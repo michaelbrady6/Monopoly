@@ -46,7 +46,7 @@ public class Board
 		board.add(new Tax("Luxury Tax"));
 		board.add(new ColoredProperty("Blue", 50, 400, "Boardwalk"));
 	}
-	public void setBoard(int i)
+	public void setBoard(int i) throws IOException
 	{
 		
 		if(i == 1)
@@ -55,11 +55,11 @@ public class Board
 			}
 		if(i == 2)
 			{
-				Scanner x = new Scanner(new File("14ers"));
+				Scanner x = new Scanner(new File("14ers.txt"));
 				for(int z = 0; z<board.size(); z++)
 					{
 						String y = x.nextLine();
-						board.get(i).setName(y);
+						this.board.get(z).setName(y);
 					}
 			}
 	}

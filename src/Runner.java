@@ -9,7 +9,6 @@ public class Runner
 	static int jailCount = 0;
 	public static void main(String[] args) throws IOException
 	{
-//		Dice d = new Dice();
 		Scanner n = new Scanner(System.in);
 		System.out.println("What is your name?");
 		String name = n.nextLine();
