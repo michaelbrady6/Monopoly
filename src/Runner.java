@@ -7,6 +7,7 @@ public class Runner
 	static Dice d = new Dice();
 	static Player p;
 	static int jailCount = 0;
+	static int doubleCount = 0;
 	public static void main(String[] args) throws IOException
 	{
 		Scanner n = new Scanner(System.in);
@@ -37,9 +38,22 @@ public class Runner
 		int x = 0;
 		Scanner in = new Scanner(System.in);
 		String roll = in.nextLine();
+		
 		x = d.roll();
+		if(d.getD1() == d.getD2())
+			{
+				doubleCount++;
+			}
+		else
+			{
+				doubleCount = 0;
+			}
 		System.out.println("You have rolled a " + x);
-		if(i%2 == 0)
+		if(roll.equals("jail"))
+			{
+				g = 30;
+			}
+		else if(i%2 == 0)
 			{
 				if(g + x < b.board.size())
 					{
